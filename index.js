@@ -1,6 +1,7 @@
 const express = require("express");
 const { Translate } = require("@google-cloud/translate").v2;
 const cors = require('cors');
+const path = require('path');
 require("dotenv").config();
 
 const app = express();
@@ -8,6 +9,7 @@ const translate = new Translate({ projectId: process.env.PROJECTID, key: process
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, './public')));
 
 // Translate the text into each supported language
 app.post("/translate", async (req, res) => {
@@ -40,5 +42,5 @@ app.post("/translate", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Listening on port ${PORT} | http://localhost:${PORT}/index.html`);
 });
