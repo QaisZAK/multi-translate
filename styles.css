@@ -1,0 +1,157 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#translate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea,
+input[type="submit"] {
+    width: 100%;
+    max-width: 500px;
+}
+
+textarea {
+    height: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#translations::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+#translations::-webkit-scrollbar-track {
+    background: #121212;
+    /* Color of the track */
+}
+
+#translations::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    /* Color of the scroll thumb */
+    border-radius: 20px;
+    /* Radius for the scroll thumb */
+}
+
+#translations::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+    /* Color of the scroll thumb on hover */
+}
+
+#translations {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    /* Adjust this value as needed */
+    overflow-y: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+    /* for Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* for Firefox */
+    overflow: -moz-scrollbars-none;
+    /* Optional: this disables scrollbars in Firefox */
+    scroll-behavior: smooth;
+    /* Optional: this makes scrolling smooth */
+    padding: 10px;
+    /* Add padding */
+    border-radius: 10px;
+    /* Increase border radius */
+    background-color: #232323;
+    /* Change background color */
+}
+
+#copy-button {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #119e1d;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    /* Add some margin at the top for spacing */
+}
+
+#copy-button:hover {
+    background-color: #0a7a0a;
+}
+
+#copy-button:disabled {
+    background-color: #888;
+    /* Change to the color you want */
+    cursor: not-allowed;
+    /* Change the cursor to a "not-allowed" cursor */
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 0;
+    /* Add vertical padding */
+}
+
+#checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    /* Add horizontal padding */
+}
+
+label {
+    margin-right: 10px;
+    /* Add space to the right of the label */
+}
+
+#include-language-names-label {
+    margin-right: 10px;
+    /* Add space to the right of the specific label */
+}
+
+#include-language-codes-label {
+    margin-right: 10px;
+    /* Add space to the right of the specific label */
+}

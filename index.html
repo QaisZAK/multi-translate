@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Multi Translation Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Multi Translation Services</h1>
+    <form id="translate-form">
+        <label for="input-text">Text to translate:</label><br>
+        <textarea id="input-text" name="input-text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Translate">
+        <div id="button-container">
+            <div id="checkbox-container">
+                <label id="include-language-names-label" for="include-language-names" onclick="toggleCheckbox('include-language-codes')">Include language names</label>
+                <input type="checkbox" id="include-language-names" onclick="toggleCheckbox('include-language-codes')">
+                <label id="include-language-codes-label" for="include-language-codes" onclick="toggleCheckbox('include-language-names')">Include language codes</label>
+                <input type="checkbox" id="include-language-codes" onclick="toggleCheckbox('include-language-names')">
+            </div>
+            <button id="copy-button" disabled>Copy Translations</button>
+        </div>
+    </form>
+    <h2>Translations:</h2>
+    <div id="translations"></div>
+</body>
+<script src="script.js"></script>
+
+</html>
